@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* IRONCLAD Industrial OS Palette */
+  --color-primary: #af101a;
+  --color-primary-container: #d32f2f;
+  --color-on-primary: #ffffff;
+  --color-secondary: #506169;
+  --color-secondary-container: #d1e2ec;
+  --color-on-secondary: #ffffff;
+  --color-tertiary: #005f7b;
+  --color-tertiary-container: #00799c;
+  --color-on-tertiary: #ffffff;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-background: #f4faff;
+  --color-on-background: #111d23;
+  --color-surface: #f4faff;
+  --color-on-surface: #111d23;
+  --color-surface-variant: #d7e4ec;
+  --color-on-surface-variant: #5b403d;
+  --color-outline: #8f6f6c;
+  --color-outline-variant: #e4beba;
+  --color-inverse-surface: #263238;
+  --color-inverse-on-surface: #e6f3fb;
+  --color-inverse-primary: #ffb3ac;
+
+  /* Surface Hierarchy */
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #e9f6fd;
+  --color-surface-container: #e3f0f8;
+  --color-surface-container-high: #ddeaf2;
+  --color-surface-container-highest: #d7e4ec;
+
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+
+  --shadow-ambient: 0 12px 40px rgba(17, 29, 35, 0.06);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-background font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
+
+.glass-card {
+  @apply bg-surface-container-lowest/85 backdrop-blur-[20px];
+}
+
+.kinetic-gradient {
+  background: linear-gradient(45deg, var(--color-primary) 0%, var(--color-primary-container) 100%);
+}
+
+.ghost-border {
+  @apply border border-outline-variant/15;
+}
